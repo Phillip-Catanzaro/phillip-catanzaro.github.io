@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f6f7fb;
+        color: #111;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      main {
+        max-width: 420px;
+      }
+      h1 {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+      }
+      p {
+        margin-top: 0.25rem;
+        line-height: 1.4;
+      }
+      code {
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        background: #fff;
+        padding: 0.15rem 0.35rem;
+        border-radius: 0.3rem;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const path = window.location.pathname.replace(/^\/+|\/+$/g, "");
+        const segments = path.split("/");
+        if (segments.length >= 3 && segments[0] === "link" && segments[1] === "trip") {
+          const tripId = segments.slice(2).join("/");
+          if (tripId) {
+            const urlTripId = encodeURIComponent(tripId);
+            const deepLink = `trippie://trip/${urlTripId}`;
+            const fallback = "https://apps.apple.com/app/6754893020";
+            document.getElementById("status").textContent = "Opening your trip in Trippie…";
+            document.getElementById("trip-id").textContent = tripId;
+            document.getElementById("manual-link").href = deepLink;
+            document.getElementById("manual-link").textContent = deepLink;
+            setTimeout(function () {
+              window.location.href = fallback;
+            }, 2000);
+            window.location.replace(deepLink);
+            return;
+          }
+        }
+
+        document.getElementById("status").textContent = "Page not found";
+        document.getElementById("manual-link").style.display = "none";
+        document.getElementById("trip-info").style.display = "none";
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1 id="status">Looking for your trip…</h1>
+      <p id="trip-info">
+        Trip ID: <code id="trip-id">–</code>
+      </p>
+      <p>
+        If you are not redirected automatically, try the universal link below or
+        open the App Store manually.
+      </p>
+      <p>
+        <a id="manual-link" href="#">Open in Trippie</a>
+      </p>
+    </main>
+  </body>
+</html>
