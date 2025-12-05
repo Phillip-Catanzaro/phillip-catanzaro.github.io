@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Airplane icon</title>
+  <defs>
+    <linearGradient id="sky" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4b8afd" />
+      <stop offset="1" stop-color="#1f6ff5" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#sky)" />
+  <path
+    fill="#ffffff"
+    d="M54 22.7c0-1.8-1.4-3.2-3.2-3.2-0.4 0-0.9 0.1-1.3 0.3l-14 6.3-11-10c-0.8-0.8-2.1-0.7-2.9 0.1l-2.3 2.3c-0.7 0.7-0.8 1.8-0.2 2.6l7.8 11.7-8.1 3.6-4.6-3.5-2.6 2.6 4.7 5.7-4.5 2.1-2 2 6.6 1.1 1.1 6.6 2-2 2.1-4.5 5.7 4.7 2.6-2.6-3.5-4.6 3.6-8.1 11.7 7.8c0.8 0.5 1.9 0.5 2.6-0.2l2.3-2.3c0.8-0.8 0.8-2.1 0.1-2.9l-10-11 6.3-14c0.2-0.4 0.3-0.8 0.3-1.2Z"
+  />
+</svg>
