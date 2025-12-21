@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Trippie Support</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --primary: #0d4ed8;
+        --accent: #21c6ff;
+        --ink: #0b1324;
+        --muted: #30405a;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background: radial-gradient(circle at 20% 20%, #eaf3ff, #d9e9ff 32%, #c8dcff 60%),
+          linear-gradient(135deg, #f7fbff 10%, #eef5ff 45%, #e1edff 90%);
+      }
+      .page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 52px 24px 80px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 36px;
+      }
+      .brand-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(13, 78, 216, 0.08);
+        border: 1px solid rgba(13, 78, 216, 0.18);
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .brand-pill .plane {
+        width: 18px;
+        height: 18px;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at 30% 30%, #fff, #d6e8ff);
+        border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(13, 78, 216, 0.18);
+        color: var(--primary);
+      }
+      h1 {
+        margin: 16px 0 10px;
+        font-size: 34px;
+        letter-spacing: -0.02em;
+      }
+      p {
+        line-height: 1.65;
+        margin: 12px 0;
+        color: var(--muted);
+      }
+      h2 {
+        margin-top: 28px;
+        font-size: 20px;
+        color: var(--ink);
+      }
+      ul {
+        padding-left: 20px;
+        color: var(--muted);
+      }
+      a {
+        color: var(--primary);
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+        border: 1px solid rgba(13, 78, 216, 0.12);
+        backdrop-filter: blur(6px);
+      }
+      .contact-box {
+        margin-top: 18px;
+        padding: 18px;
+        border-radius: 12px;
+        background: rgba(33, 198, 255, 0.12);
+        border: 1px solid rgba(13, 78, 216, 0.22);
+      }
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      .pill {
+        background: rgba(13, 78, 216, 0.08);
+        border: 1px solid rgba(13, 78, 216, 0.16);
+        color: var(--muted);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <span class="brand-pill"><span class="plane">✈︎</span> Trippie Support</span>
+        <h1>We’re here to help</h1>
+        <p>Use this page for any support needs related to the Trippie app.</p>
+      </header>
+      <div class="card">
+        <h2>Contact Support</h2>
+        <p>
+          If you have questions about your account, trip planning, or sharing, contact our
+          support team and we’ll respond as quickly as possible.
+        </p>
+        <div class="contact-box">
+          <p>
+            Email us at
+            <a href="mailto:support@trippie-app.com">support@trippie-app.com</a>.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Response time: 1-2 business days</span>
+            <span class="pill">Available: Mon–Fri</span>
+          </div>
+        </div>
+
+        <h2>Helpful resources</h2>
+        <ul>
+          <li>Visit the <a href="/help">Help Center</a> for quick tips.</li>
+          <li>Review our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a>.</li>
+          <li>Need to update your account? Manage your profile in the Trippie app.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
